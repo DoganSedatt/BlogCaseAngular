@@ -1,0 +1,32 @@
+<div class="container mt-5">
+  <form [formGroup]="registerForm" class="form" (ngSubmit)="onSubmit()">
+    <p class="title">Kayıt Ol</p>
+    <p class="message">Şimdi kaydolun ve uygulamamıza tam erişim elde edin.</p>
+    
+    <div class="flex">
+      <label>
+        <input class="input" formControlName="firstname" type="text" required>
+        <span>Ad</span>
+      </label>
+    
+      <label>
+        <input class="input" formControlName="lastname" type="text" required>
+        <span>Soyad</span>
+      </label>
+    </div>
+    
+    <label>
+      <input class="input" formControlName="email" type="email" required>
+      <span>Email</span>
+    </label>
+    
+    <label>
+      <input class="input" formControlName="password" type="password" required>
+      <span>Şifre</span>
+    </label>
+    
+    <button class="submit" type="submit" [disabled]="registerForm.invalid">Kayıt Ol</button>
+    
+    <p class="signin">Zaten bir hesabın var mı? <a routerLink="/login">Giriş Yap</a></p>
+  </form>
+</div>

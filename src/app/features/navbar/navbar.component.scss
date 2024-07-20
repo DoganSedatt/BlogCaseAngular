@@ -1,0 +1,20 @@
+
+  .navbar {
+    justify-content: center;
+  }
+  .navbar .navbar-collapse {
+    display: flex;
+    justify-content: center;
+  }
+  .navbar .navbar-nav {
+    flex-direction: row;
+  }
+  .navbar-brand{
+    margin-left: 30px;
+  }
+
+  .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; /* İsteğe bağlı olarak menünün pozisyonunu ayarlayabilirsiniz */
+  }
+  

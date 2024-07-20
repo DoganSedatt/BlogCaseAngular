@@ -1,0 +1,72 @@
+.container {
+  max-width: 400px; /* Container genişliği sınırla */
+  margin: 0 auto; /* Ortalamak için */
+  padding: 20px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.input-group {
+  margin-bottom: 15px;
+}
+.input-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.sign {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.sign:hover {
+  background-color: #0056b3;
+}
+.social-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+.line {
+  height: 1px;
+  width: 100px;
+  background-color: #ccc;
+  margin: 0 10px;
+}
+.message {
+  font-weight: bold;
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.social-icons .icon {
+  background: none;
+  border: none;
+  margin: 0 10px;
+  cursor: pointer;
+}
+.signup {
+  text-align: center;
+}
+.signup button {
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  text-decoration: underline;
+}

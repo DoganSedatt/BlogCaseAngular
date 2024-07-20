@@ -1,0 +1,14 @@
+<div class="container mt-5">
+    <form [formGroup]="blogUpdateForm" >
+      <div class="form-group">
+        <label for="title">Başlık</label>
+        <input type="text" class="form-control" id="title" formControlName="title" value="{{blogService.selectedBlog.title}}">
+      </div>
+      <div class="form-group">
+        <label for="content">İçerik</label>
+        <textarea class="form-control" id="content" formControlName="content"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary" (click)="blogUpdate()">Güncelle</button>
+    </form>
+  </div>
+  

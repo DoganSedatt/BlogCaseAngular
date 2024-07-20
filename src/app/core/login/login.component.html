@@ -1,0 +1,22 @@
+
+<div class="container mt-5">
+    <p class="title">Sisteme Giriş</p>
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin()" class="form">
+      <div class="input-group">
+        <label for="username">Email</label>
+        <input formControlName="email" type="text" id="username" placeholder="">
+      </div>
+      <div class="input-group">
+        <label for="password">Şifre</label>
+        <input formControlName="password" type="password" id="password" placeholder="">
+       
+      </div>
+      <button class="sign" type="submit">Giriş Yap</button>
+    </form>
+    
+   
+    <p class="signup">Bir hesaba sahip değil misin?
+      <button routerLink="/register" >Kayıt Ol</button>
+    </p>
+  </div>
+  

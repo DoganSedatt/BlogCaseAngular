@@ -1,0 +1,22 @@
+<div class="container mt-5" style="background-color: #f8f9fa; padding: 20px; border-radius: 8px;">
+    <table class="table table-striped table-hover">
+        <thead class="thead-dark">
+            <tr>
+                <th><h1>Konu</h1></th>
+                <th><h1>Yazar</h1></th>
+                <th><h1>Oluşturulma Tarihi</h1></th>
+                <th><h1></h1></th>
+                <th><h1></h1></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of blogs">
+                <td>{{item.title}}</td>
+                <td>{{item.memberName.toUpperCase()}}</td>
+                <td>{{item.createdDate | date}}</td>
+                <td><button class="btn btn-warning" (click)="selectedBlog(item)">Güncelle</button></td>
+                <td><button class="btn btn-danger" (click)="deleteBlog($event, item.id)">Sil</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

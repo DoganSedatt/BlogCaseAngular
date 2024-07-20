@@ -1,0 +1,39 @@
+.blog-details {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  margin-left: auto;
+}
+
+.blog-details h1, .blog-details h2, .blog-details h3, .blog-details h4, .blog-details h5, .blog-details h6 {
+  text-align: center;
+}
+
+  
+.blog-date {
+  font-size: 14px;
+  color: #666;
+  text-align: right;
+}
+  
+.blog-content {
+  margin-top: 15px;
+  color: black;
+  font-size: 18px; /* Yazı boyutu */
+  font-family: 'Arial', sans-serif; /* Yazı tipi */
+  font-weight: normal; /* Yazı kalınlığı */
+  line-height: 1.5; /* Satır yüksekliği */
+}
+
+  
+  .comments-list {
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  .comments-list li {
+    margin-bottom: 10px;
+  }
+  

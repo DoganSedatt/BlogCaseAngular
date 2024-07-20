@@ -1,0 +1,38 @@
+<div class="container mt-5">
+  <div class="blog-details">
+    <h2>{{blogService.selectedBlog.title.toUpperCase()}}</h2>
+    <p class="blog-date">{{blogService.selectedBlog.createdDate | date:'mediumDate'}}</p>
+    <hr>
+    <div class="blog-content">
+      {{blogService.selectedBlog.content}}
+    </div>
+    <button (click)="toogleCommentForm()" class="btn btn-primary" *ngIf="authService.isLogged">
+      Yorum yapmak için tıkla
+    </button>
+    <button routerLink="/login" class="btn btn-primary" *ngIf="!authService.isLogged">
+      Yorum yapmak için giriş yap
+    </button>
+    <form *ngIf="showCommentForm" [formGroup]="commentForm" (ngSubmit)="submitCommentForm()">
+      <div class="form-group">
+        <label for="commentText">Yorum</label>
+        <textarea id="commentText" formControlName="content" class="form-control" rows="4"
+                  [ngClass]="{ 'is-invalid': commentForm.get('content')?.invalid && (commentForm.get('content')?.dirty || commentForm.get('content')?.touched) }"></textarea>
+        <div *ngIf="commentForm.get('content')?.invalid && (commentForm.get('content')?.dirty || commentForm.get('content')?.touched)"
+             class="invalid-feedback">
+          Yorum alanını boş bırakmayın
+        </div>
+      </div>
+      <button type="submit" class="btn btn-warning" [disabled]="commentForm.invalid">Yorumu Gönder</button>
+    </form>
+  </div>
+  <div class="comments-section mt-5">
+    <h3>Yorumlar</h3>
+    <div class="card mb-3" *ngFor="let comment of blogInfo.comments">
+      <div class="card-body" *ngIf="comment.length>0">
+        
+        <p class="card-text">{{ comment }}</p>
+      </div>
+    </div>
+  </div>
+  
+
